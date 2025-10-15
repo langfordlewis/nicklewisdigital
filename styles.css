@@ -154,19 +154,24 @@ footer a:hover {
 
     .off-screen-menu {
     display: block;
-    background-color: seagreen;
+    background-color: rgb(0, 0, 0);
     height: 100vh;
     width: 100%;
-    max-width: 450px;
+    max-width: 400px;
     position: fixed;
     top: 0;
     right: -450px;
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
     text-align: center;
     font-size: 3rem;
     transition: .3s ease;
+    }
+
+    .off-screen-menu li {
+    list-style-type: none;
     }
 
     .off-screen-menu.active {
@@ -181,16 +186,16 @@ footer a:hover {
 
     .ham-menu {
     display: block;
-    height: 50px;
-    width: 50px;
+    height: 40px;
+    width: 40px;
     margin-left: auto;
     position: relative;
     }
 
     .ham-menu span {
-        height: 5px;
+        height: 3px;
         width: 100%;
-        background-color: rgb(139, 46, 46);
+        background-color: #C3F23A;
         border-radius: 25px;
         position: absolute;
         top: 50%;
