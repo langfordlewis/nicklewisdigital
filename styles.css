@@ -74,6 +74,10 @@ nav {
     color: #C3F23A;
 }
 
+.off-screen-menu, .ham-menu {
+    display: none;
+}
+
 /* Main Content */
 main {
     flex: 1;
@@ -148,8 +152,73 @@ footer a:hover {
         align-items: center;
     }
 
+    .off-screen-menu {
+    display: block;
+    background-color: seagreen;
+    height: 100vh;
+    width: 100%;
+    max-width: 450px;
+    position: fixed;
+    top: 0;
+    right: -450px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    font-size: 3rem;
+    transition: .3s ease;
+    }
+
+    .off-screen-menu.active {
+        right: 0;
+    }
+
     nav {
+        padding: 1rem;
         width: 100%;
+        display: flex;
+    }
+
+    .ham-menu {
+    display: block;
+    height: 50px;
+    width: 50px;
+    margin-left: auto;
+    position: relative;
+    }
+
+    .ham-menu span {
+        height: 5px;
+        width: 100%;
+        background-color: rgb(139, 46, 46);
+        border-radius: 25px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        transition: .3s ease;
+    }
+
+    .ham-menu span:nth-child(1) {
+        top: 25%;
+    }
+
+    .ham-menu span:nth-child(3) {
+        top: 75%;
+    }
+
+    .ham-menu.active span:nth-child(1) {
+        top: 50%;
+        transform: translate(-50%, -50%) rotate(45deg);
+    }
+
+    .ham-menu.active span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .ham-menu.active span:nth-child(3) {
+        top: 50%;
+        transform: translate(-50%, -50%) rotate(-45deg);
     }
 
     .logo {
@@ -161,18 +230,7 @@ footer a:hover {
     }
 
     .nav-menu {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        position: fixed;
-        bottom: 20px;
-        right: 20px;
-        flex-direction: column;
-        gap: 0.2rem;
-        background-color: rgba(180, 49, 49, 0.95);
-        backdrop-filter: blur(10px);
-        padding: 0.5rem;
-        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
-        font-family: 'Bricolage Grotesque', sans-serif;
+        display: none;
     }
 
     .nav-menu li {
