@@ -1,6 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Under Construction</title>
+  
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;600&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+  
+  <style>
+    :root {
+      --bg-color: #FFFFEE;
+      --accent-color: #3BA99C;
+      --secondary-color: #FF8811;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: var(--bg-color);
+      color: #222;
+      font-family: 'Poppins', sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      text-align: center;
+    }
+
+    .container {
+      max-width: 600px;
+      padding: 2rem;
+    }
+
+    h1 {
+      font-family: 'Google Sans', sans-serif;
+      font-size: 3rem;
+      color: var(--accent-color);
+      margin-bottom: 1rem;
+    }
+
+    p {
+      font-size: 1.2rem;
+      color: #555;
+    }
+
+    .accent {
+      color: var(--secondary-color);
+      font-weight: 600;
+    }
+
+    .loader {
+      margin: 2rem auto 0;
+      border: 4px solid #ddd;
+      border-top: 4px solid var(--accent-color);
+      border-radius: 50%;
+      width: 40px;
+      height: 40px;
+      animation: spin 1s linear infinite;
+    }
+
+    @keyframes spin {
+      to {
+        transform: rotate(360deg);
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>We’re Building Something New</h1>
+    <p>Our site is currently <span class="accent">under construction</span>.<br>
+       Check back soon for something great!</p>
+    <div class="loader"></div>
+  </div>
+</body>
+</html>
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Nick Lewis Digital | Home</title>
@@ -50,4 +128,4 @@
     <script src="particles.js"></script>
     <script src="ham-menu.js"></script>
 </body>
-</html>
+</html> -->
