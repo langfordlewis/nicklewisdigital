@@ -21,16 +21,44 @@
       margin: 0;
       padding: 0;
       background-color: var(--bg-color);
-      color: #222;
       font-family: 'Poppins', sans-serif;
       display: flex;
       justify-content: center;
       align-items: center;
       height: 100vh;
       text-align: center;
+      position: relative; /* for overlay and bg image */
+      color: #222;
+      overflow: hidden; /* prevent scrollbars if image is slightly larger */
+    }
+
+    /* Glass logo as background */
+    .bg-image {
+      position: absolute;
+      width: 70%;       /* half the viewport width */
+      height: auto;     /* keep aspect ratio */
+      top: 50%;         /* vertical center */
+      left: 50%;        /* horizontal center */
+      transform: translate(-50%, -50%); /* perfect centering */
+      z-index: 0;       /* behind everything */
+      opacity: 0.6;     /* optional: subtle glass effect */
+      pointer-events: none; /* allow clicks to pass through */
+    }
+
+    /* Semi-transparent overlay for readability */
+    .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(255, 255, 238, 0.5);
+      z-index: 1;
     }
 
     .container {
+      position: relative;
+      z-index: 2; /* content above overlay */
       max-width: 600px;
       padding: 2rem;
     }
@@ -69,12 +97,19 @@
   </style>
 </head>
 <body>
+  <!-- Background logo -->
+  <img src="images/NLDLogo-3DGlass1.png" alt="Background Logo" class="bg-image">
+
+  <!-- Overlay for readability -->
+  <div class="overlay"></div>
+
+  <!-- Main content -->
   <div class="container">
-  <img src="images/Group 8.png" alt="Logo" style="max-width: 200px; width:100%; height:auto;" />
+    <img src="images/Group 8.png" alt="Logo" style="max-width: 200px; width:100%; height:auto;" />
     <h1>We're Building Something New</h1>
-    <p>Our site is currently <span class="accent">under construction</span>.<br>
-       Check back soon for something great!</p>
     <div class="loader" aria-hidden="true"></div>
+    <p>Our site is currently <span class="accent">under construction</span>.<br>
+       Check back soon for more!</p>
   </div>
 </body>
 </html>
