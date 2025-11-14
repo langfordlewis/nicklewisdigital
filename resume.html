@@ -9,6 +9,9 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Google+Sans+Code:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-papxG/1tD3EYXOG5rZrF1q9c3... (truncated)" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
 
   <style>
     :root {
@@ -44,6 +47,7 @@
       margin: 0;
       color: var(--accent-color);
       font-weight: 600;
+      font-family: 'Google Sans Code', sans-serif;
     }
 
     .header h2 {
@@ -66,7 +70,7 @@
     .contact-info span {
       display: flex;
       align-items: center;
-      gap: 0.25rem;
+      gap: 0.3rem;
     }
 
     .contact-info a {
@@ -77,6 +81,13 @@
 
     .contact-info a:hover {
       color: var(--secondary-color);    
+    }
+
+    .contact-info i {
+      color: var(--secondary-color);  /* orange by default */
+      transition: color 0.3s ease;    /* smooth hover transition */
+      padding-right: 5px;
+      padding-left: 15px;
     }
 
     /* Accent underline bar */
@@ -222,12 +233,12 @@
 
   <!-- ---- Header ---- -->
   <div class="header">
-    <h1>NICHOLAS LEWIS</h1>
+    <h1>nick lewis</h1>
     <h2>Creative Digital Generalist | Brand Identity • UX/UI • Digital & eCommerce</h2>
     <div class="contact-info">
-        <span>✉️ <a href="mailto:hello@nicklewis.digital">hello@nicklewis.digital</a></span>
-        <span>☎️ <a href="tel:+447749878766">+44 (0) 7749 878 766</a></span>
-        <span>🔗 <a href="https://www.linkedin.com/in/langfordlewis/" target="_blank">LinkedIn</a></span>
+        <span><i class="fas fa-envelope"></i> <a href="mailto:hello@nicklewis.digital">hello@nicklewis.digital</a></span>
+        <span><i class="fas fa-phone"></i> <a href="tel:+447749878766">+44 (0) 7749 878 766</a></span>
+        <span><i class="fab fa-linkedin"></i> <a href="https://www.linkedin.com/in/langfordlewis/" target="_blank">LinkedIn</a></span>
     </div>
   </div>
 
