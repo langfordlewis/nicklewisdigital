@@ -63,6 +63,17 @@
       padding: 2rem;
     }
 
+    .container a {
+      color: var(--accent-color); 
+      font-weight: bold;
+      text-decoration: none;          
+      transition: color 0.3s ease;    
+    }
+
+    .container a:hover {
+      color: var(--secondary-color);    
+    }
+
     h1 {
       font-size: 3rem;
       color: var(--accent-color);
@@ -117,6 +128,9 @@
     <div class="loader" aria-hidden="true"></div>
     <p>Our site is currently <span class="accent">under construction</span>.<br>
        Check back soon for more!</p>
+    <p style="margin-top: 2rem; font-size: 0.95rem;"> 
+    <a href="resume.html" class="resume-link">Resumé</a>
+    </p>
   </div>
 </body>
 </html>

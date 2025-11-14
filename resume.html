@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Nicholas Lewis - CV</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg-color: #FFFFEE;
+      --accent-color: #3BA99C;
+      --secondary-color: #FF8811;
+      --text-color: #222;
+      --subtext-color: #555;
+    }
+
+    body {
+      margin: 0;
+      padding: 2rem;
+      background-color: var(--bg-color);
+      font-family: 'Poppins', sans-serif;
+      color: var(--text-color);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    /* ---- Header ---- */
+    .header {
+      text-align: center;
+      margin-bottom: 2rem;
+      position: relative;
+      width: 100%;
+      max-width: 1000px;
+    }
+
+    .header h1 {
+      font-size: 3.5rem;
+      margin: 0;
+      color: var(--accent-color);
+      font-weight: 600;
+    }
+
+    .header h2 {
+      font-size: 1.3rem;
+      margin: 0.25rem 0 0.5rem 0;
+      font-weight: 400;
+      color: var(--text-color);
+    }
+
+    .contact-info {
+      font-size: 1.05rem;
+      color: var(--subtext-color);
+      margin-top: 0.5rem;
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .contact-info span {
+      display: flex;
+      align-items: center;
+      gap: 0.25rem;
+    }
+
+    .contact-info a {
+      color: var(--accent-color); 
+      text-decoration: none;          
+      transition: color 0.3s ease;    
+    }
+
+    .contact-info a:hover {
+      color: var(--secondary-color);    
+    }
+
+    /* Accent underline bar */
+    .header::after {
+      content: "";
+      display: block;
+      width: 80px;
+      height: 4px;
+      background-color: var(--secondary-color);
+      margin: 1rem auto 0 auto;
+      border-radius: 2px;
+    }
+
+    /* ---- CV Container ---- */
+    .cv-container {
+      display: grid;
+      grid-template-columns: 35% 65%;
+      max-width: 1000px;
+      width: 100%;
+      gap: 2rem;
+    }
+
+    /* ---- Left Column ---- */
+    .left {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+
+    .left h2 {
+      font-size: 1.4rem;
+      color: var(--accent-color);
+      margin-bottom: 0.5rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .left p, .left ul {
+      font-size: 1.05rem;
+      color: var(--subtext-color);
+      margin: 0;
+      padding-left: 1rem;
+    }
+
+    .left ul li {
+      margin-bottom: 0.5rem;
+    }
+
+    /* ---- Right Column ---- */
+    .right {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+
+    .right h2 {
+      font-size: 1.4rem;
+      color: var(--accent-color);
+      margin-bottom: 0.5rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .job {
+      margin-bottom: 1rem;
+    }
+
+    .job h3 {
+      margin: 0;
+      font-weight: 600;
+      font-size: 1.15rem;
+    }
+
+    .job h4 {
+      margin: 0;
+      font-weight: 400;
+      font-style: italic;
+      font-size: 1rem;
+      color: var(--subtext-color);
+    }
+
+    .job ul {
+      margin-top: 0.5rem;
+      padding-left: 1rem;
+    }
+
+    .job ul li {
+      margin-bottom: 0.5rem;
+      font-size: 1.05rem;
+    }
+
+    .achievement {
+      font-size: 1.05rem;
+      padding-left: 1rem;
+    }
+
+    /* ---- Responsive ---- */
+    @media(max-width: 900px) {
+      .cv-container {
+        grid-template-columns: 1fr;
+      }
+      
+      .header h1 {
+        font-size: 2.5rem;
+      }
+    }
+    
+    @media(max-width: 600px) {
+      body {
+        padding: 1.5rem;
+      }
+      
+      .header h1 {
+        font-size: 2rem;
+      }
+      
+      .header h2 {
+        font-size: 1rem;
+      }
+      
+      .contact-info {
+        font-size: 0.85rem;
+        gap: 0.5rem;
+      }
+      
+      .cv-container {
+        gap: 1.5rem;
+      }
+      
+      .left h2, .right h2 {
+        font-size: 1.1rem;
+      }
+    }
+
+    .accent {
+      color: var(--secondary-color);
+      font-weight: 600;
+    }
+
+  </style>
+</head>
+<body>
+
+  <!-- ---- Header ---- -->
+  <div class="header">
+    <h1>NICHOLAS LEWIS</h1>
+    <h2>Creative Digital Generalist | Brand Identity • UX/UI • Digital & eCommerce</h2>
+    <div class="contact-info">
+        <span>✉️ <a href="mailto:hello@nicklewis.digital">hello@nicklewis.digital</a></span>
+        <span>☎️ <a href="tel:+447749878766">+44 (0) 7749 878 766</a></span>
+        <span>🔗 <a href="https://www.linkedin.com/in/langfordlewis/" target="_blank">LinkedIn</a></span>
+    </div>
+  </div>
+
+  <!-- ---- CV Container ---- -->
+  <div class="cv-container">
+
+    <!-- Left Column -->
+    <div class="left">
+      <h2>Profile</h2>
+      <p>Creatively-led digital generalist blending brand identity, UX/UI, and eCommerce experience with technical know-how. Experienced in leading teams, translating vision into actionable digital experiences, and leveraging AI to accelerate creative thinking while maintaining human-crafted quality. Seeking a hybrid role (70% creative / 30% technical) with opportunities to mentor and lead.</p>
+
+      <h2>Core Skills</h2>
+      <ul>
+        <li><span class="accent">Creative:</span> Brand identity, UX/UI, visual storytelling, layout, typography, creative direction</li>
+        <li><span class="accent">Digital:</span> WordPress, WooCommerce, Figma, Adobe Suite, HTML/CSS/JS, Google Analytics, SEO, AI tools, Blender (beginner)</li>
+        <li><span class="accent">Strategy & Leadership:</span> Brand strategy, UX flows, project scoping, AI workflows, mentoring, team collaboration</li>
+      </ul>
+
+      <h2>Soft Skills</h2>
+      <ul>
+        <li>Diplomatic, collaborative, empathetic</li>
+        <li>Problem-solver, culture-first mindset</li>
+      </ul>
+    </div>
+
+    <!-- Right Column -->
+    <div class="right">
+      <h2>Experience</h2>
+
+      <div class="job">
+        <h3>eCommerce Manager</h3>
+        <h4>Wine Owners | 2023–2025</h4>
+        <ul>
+          <li>Delivered WordPress/WooCommerce webshops; coordinated creative, dev & data teams.</li>
+          <li>Managed Wine Hub integrations; synchronised live inventory across multiple client stores.</li>
+          <li>Scoped requirements, prioritised workloads, maintained client communication.</li>
+          <li>Optimised UX, content, and analytics; increased engagement & CTR.</li>
+          <li>Introduced AI-assisted workflows for content planning & optimisation.</li>
+          <li>Authored internal documentation & client guides.</li>
+        </ul>
+      </div>
+
+      <div class="job">
+        <h3>Head of Development</h3>
+        <h4>In Development | 2017–2023</h4>
+        <ul>
+          <li>Led creative projects for production companies/directors; produced pitch materials, treatments & visual narratives.</li>
+          <li>Scoped briefs, managed timelines, and coordinated teams.</li>
+          <li>Combined copywriting, visual research & layout to produce brand-aligned storytelling assets.</li>
+          <li>Acted as strategic bridge between vision & delivery; elevated creative standards.</li>
+        </ul>
+      </div>
+
+      <h2>Achievements</h2>
+      <ul class="achievement">
+        <li>Redesigned wine merchant webshops, elevating visual & functional standards (Vinco).</li>
+        <li>Secured major pitches, including LEGO, through high-impact creative treatments.</li>
+        <li>Transitioned into digital/eCommerce, building technical & strategic skills rapidly.</li>
+      </ul>
+
+    </div>
+
+  </div>
+</body>
+</html>
